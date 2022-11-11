@@ -1,4 +1,4 @@
-import colorama
+from colorama import Fore, Back
 import time
 
 
@@ -6,7 +6,7 @@ import time
 # Весь список цветом можно найти в colorama классе Fore
 # Example: string_to_colored(Fore.RED, "Hello World", 1, 3)
 # Result: возвращает string "Hello World 1 3" покрашенный в красный цвет
-def string_to_colored(color, *args) -> str:
+def str_to(color: Fore, *args) -> str:
     info: str = ""
     for i in args:
         info += str(i)
