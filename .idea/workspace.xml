@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff229a18-1482-4abb-a8c0-b43d3246e2fd" name="Changes" comment="Refactoring&#10;Reworking&#10;added method reduceHp">
-      <change beforePath="$PROJECT_DIR$/Actors/Actor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/actor.py" beforeDir="false" afterPath="$PROJECT_DIR$/actors/actor.py" afterDir="false" />
-    </list>
+    <list default="true" id="ff229a18-1482-4abb-a8c0-b43d3246e2fd" name="Changes" comment="Refactoring&#10;Reworking&#10;added method reduceHp" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,12 +19,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="develop" />
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668199689641</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactoring&#10;Reworking&#10;added method reduceHp">
+      <created>1668199973310</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668199973310</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
