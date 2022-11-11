@@ -8,10 +8,12 @@ class Actor:
     intelligence = None
     agility = None
     isDead = False
+    isPlayer = False
 
-    def reduceHp(self, attacker, damage):
+    def reduceHp(self, attacker, damage) -> int:
         self.hp -= damage
-        print("Получено: " + str_to(Fore.RED, str(damage)) + " ед. урона.")
+        if self.isPlayer:
+            print("Получено урон: " + str_to(Fore.RED, damage) + " ед. урона от " + attacker.name)
 
     def isDead(self) -> bool:
         return self.isDead
