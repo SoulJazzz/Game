@@ -10,7 +10,7 @@ class Actor:
     isDead = False
     isPlayer = False
 
-    def reduceHp(self, attacker, damage) -> int:
+    def reduceHp(self, attacker, damage):
         self.hp -= damage
         if self.isPlayer:
             print("Получено урон: " + str_to(Fore.RED, damage) + " ед. урона от " + attacker.name)
