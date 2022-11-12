@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff229a18-1482-4abb-a8c0-b43d3246e2fd" name="Changes" comment="Refactoring&#10;Reworking&#10;added method reduceHp">
+    <list default="true" id="ff229a18-1482-4abb-a8c0-b43d3246e2fd" name="Changes" comment="- Added Inventory.py with invnetory class which holds an items and equip items">
+      <change afterPath="$PROJECT_DIR$/actors/containers/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/actor.py" beforeDir="false" afterPath="$PROJECT_DIR$/actors/actor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +27,15 @@
     <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="finfan &lt;finex.dev@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,9 +57,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/finfan/PycharmProjects/Game",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\finfan\PycharmProjects\Game\actors" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Actor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Game" />
@@ -184,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668200650985</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="actor upd">
+      <created>1668206121829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668206121829</updated>
+    </task>
+    <task id="LOCAL-00009" summary="upd.gitignore">
+      <created>1668206256519</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668206256519</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,12 +226,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update project by Hello World string and other definitions added" />
     <MESSAGE value="- Added isDead and die funcs&#10;- Refactoring &amp; fixes (исправление ошибок и переименовки файлов/классов)&#10;- getAttack return int now (там будет формула weapon_attack * strength + rnd)" />
     <MESSAGE value="- Added UTILS with rnd &amp; text&#10;&#10;Using:&#10;import rnd in your file and call his funcs: rnd_calc(50)&#10;&#10;import text in your file and call his funcs: string_to_colored(Fore.RED, &quot;Hello world!&quot;, &quot;!!!&quot;, 1, False)" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Refactoring&#10;Reworking&#10;added method reduceHp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring&#10;Reworking&#10;added method reduceHp" />
+    <MESSAGE value="actor upd" />
+    <MESSAGE value="upd.gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd.gitignore" />
   </component>
 </project>
