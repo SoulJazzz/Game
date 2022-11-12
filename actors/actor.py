@@ -1,4 +1,5 @@
 from utils.text import *
+from containers.inventory import *
 
 
 class Actor:
@@ -9,6 +10,7 @@ class Actor:
     agility = None
     isDead = False
     isPlayer = False
+    inv: Inventory = Inventory()
 
     def reduceHp(self, attacker, damage):
         self.hp -= damage

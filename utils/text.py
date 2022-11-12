@@ -22,3 +22,9 @@ def print_as_machine(text: str, delay: int):
     for i in text:
         print(i, end="")
         time.sleep(delay)
+
+
+# Отпечатывает вариант ошибки (всё красным текстом)
+# Дёргает состояние "исключения" чтобы отпечатать проблему.
+def error(text, e: Exception):
+    print(str_to(Fore.RED, text + ": " + str(e)))

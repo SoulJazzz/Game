@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff229a18-1482-4abb-a8c0-b43d3246e2fd" name="Changes" comment="- Added Inventory.py with invnetory class which holds an items and equip items">
-      <change afterPath="$PROJECT_DIR$/actors/containers/inventory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ff229a18-1482-4abb-a8c0-b43d3246e2fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actors/actor.py" beforeDir="false" afterPath="$PROJECT_DIR$/actors/actor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actors/containers/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/actors/containers/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/text.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <recent name="C:\Users\finfan\PycharmProjects\Game\actors" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.actor">
     <configuration name="Actor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Game" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,6 +79,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Actors/Actor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="actor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Game" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/actors" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/actors/actor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.actor" />
         <item itemvalue="Python.text" />
         <item itemvalue="Python.rnd" />
         <item itemvalue="Python.Actor" />
         <item itemvalue="Python.text" />
-        <item itemvalue="Python.rnd" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668206256519</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Added Inventory.py with invnetory class which holds an items and equip items">
+      <created>1668257242793</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668257242793</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +263,7 @@
     <MESSAGE value="Refactoring&#10;Reworking&#10;added method reduceHp" />
     <MESSAGE value="actor upd" />
     <MESSAGE value="upd.gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="upd.gitignore" />
+    <MESSAGE value="- Added Inventory.py with invnetory class which holds an items and equip items" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added Inventory.py with invnetory class which holds an items and equip items" />
   </component>
 </project>
