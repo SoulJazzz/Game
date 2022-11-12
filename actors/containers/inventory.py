@@ -33,7 +33,7 @@ class Inventory:
 
         if index != -1:
             item = self.items[index]
-            print("Предмет " + str_to(Fore.RED, item.name) + " был удалён из инвентаря.")
+            print(StringBuilder().append("Предмет").append_red(item.name).append("был удалён из инвентаря."))
             self.items[index] = None
 
     def del_item_by_index(self, index):
@@ -41,7 +41,7 @@ class Inventory:
         if item is None:
             return
         else:
-            print("Предмет " + str_to(Fore.RED, item.name) + " был удалён из инвентаря.")
+            print(StringBuilder().append("Предмет").append_red(item.name).append("был удалён из инвентаря."))
             self.items[index] = None
 
     def enough_space(self) -> bool:
@@ -54,6 +54,7 @@ class Inventory:
         try:
             index: int = self.find_space()
             self.items[index] = item
+            print(StringBuilder().append_green("Вы получили").append_yellow(item.name, "!"))
         except Exception as e:
             error("Ошибка в containers/inventory.py/add_item(self, item)", e)
 
