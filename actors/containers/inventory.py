@@ -56,7 +56,7 @@ class Inventory:
             self.items[index] = item
             print(StringBuilder().append_green("Вы получили").append_yellow(item.name, "!"))
         except Exception as e:
-            error("Ошибка в containers/inventory.py/add_item(self, item)", e)
+            error("Ошибка в containers/inventory.py/add_item(self, items)", e)
 
     def find_space(self) -> int:
         index = 0
