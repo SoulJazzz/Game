@@ -6,6 +6,17 @@ from enum import *
 
 
 @unique
+class EquipSlot(Enum):
+    RightHand = 0
+    LeftHand = 1
+    Helmet = 2
+    Body = 3
+    Gaiters = 4
+    Boots = 5
+    Gloves = 6
+
+
+@unique
 class ItemType(Enum):
     POTION = 0
     WEAPON = 1
@@ -23,6 +34,7 @@ class Item:
     base_price: int = 0
     price_modifier: float = 0
     type: ItemType = ItemType.OTHER
+    slot: EquipSlot = None
 
     def __init__(self, id, name, type):
         self.id = id
@@ -40,8 +52,12 @@ class Item:
         return self.type is not ItemType.QUEST
 
     def set_rnd_base_price(self) -> int:
-        self.base_price = round(rnd_get_minmax(10, 100) * self.price_modifier) if (self.type is not ItemType.QUEST) else 0
+        self.base_price = round(rnd_get_minmax(10, 100) * self.price_modifier) if (
+                    self.type is not ItemType.QUEST) else 0
         return self.base_price
+
+    def equip(self):
+        pass
 
     def __str__(self) -> str:
         return StringBuilder() \
@@ -67,7 +83,6 @@ quest = Item(2, "Зуб дракона", ItemType.QUEST)
 quest.descr = "Необходимый квестовый предмет для Larry NPC."
 quest.weight = 0.05
 print(quest)
-
 
 potion = Item(2, "Малое зелье лечения", ItemType.POTION)
 potion.descr = "Можно выпить и исцелить себе 50ОЗ... наверное..."

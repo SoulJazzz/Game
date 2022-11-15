@@ -1,37 +1,14 @@
-from colorama import Fore, Back
+import inspect
+import msvcrt
 import time
 
+from multimethods import multimethod
 
-# Раскрашивает *args в цвет который указан в color
-# Весь список цветом можно найти в colorama классе Fore
-# Example: string_to_colored(Fore.RED, "Hello World", 1, 3)
-# Result: возвращает string "Hello World 1 3" покрашенный в красный цвет
-def colored(color: Fore = Fore.WHITE,
-            *args) -> str:
-    info: str = ""
-    for i in args:
-        info += str(i)
+from colorama import *
 
-    return color + info + '\033[0m'
+overload = multimethod
 
-
-# Отпечатывает текс в машинописном стиле
-# Example: text=Hello, delay=0.25
-# Result: H [0.25sec] e [0.25sec] l [0.25sec] l [0.25sec] o [0.25sec]
-# буква за буквой появляются через каждые 0.25 сек согласно примеру выше
-def printing(text: str,
-             delay: float = 0.1,
-             _input: bool = False) -> str:
-    for i in text:
-        print(i, end="")
-        time.sleep(delay)
-    return _input if "" else text
-
-
-# Отпечатывает вариант ошибки (всё красным текстом)
-# Дёргает состояние "исключения" чтобы отпечатать проблему.
-def error(text, e: Exception):
-    print(colored(Fore.RED, text, ": ", str(e)))
+ARROW_RIGHT: str = "➤"
 
 
 class StringBuilder:
@@ -88,3 +65,53 @@ class StringBuilder:
 
     def containsIgnoreCase(self, text: str) -> bool:
         pass
+
+
+# Раскрашивает *args в цвет который указан в color
+# Весь список цветом можно найти в colorama классе Fore
+# Example: string_to_colored(Fore.RED, "Hello World", 1, 3)
+# Result: возвращает string "Hello World 1 3" покрашенный в красный цвет
+def colored(color: Fore = Fore.WHITE,
+            *args) -> str:
+    info: str = ""
+    for i in args:
+        info += str(i)
+
+    return color + info + '\033[0m'
+
+
+# Отпечатывает текс в машинописном стиле
+# Example: text=Hello, delay=0.25
+# Result: H [0.25sec] e [0.25sec] l [0.25sec] l [0.25sec] o [0.25sec]
+# буква за буквой появляются через каждые 0.25 сек согласно примеру выше
+def printing(text: str, delay: float = 0.02, _input: bool = False) -> str:
+    output = ''
+    words = text.split(' ')
+    line_length = 0
+
+    for i in range(0, len(words)):
+        word = words[i]
+        if line_length + len(word) > 120:
+            word = '\n' + word
+            line_length = 0
+        else:
+            line_length += len(word)
+
+        output += word + ' '
+
+    for i in output:
+        print(i, end="")
+        time.sleep(delay)
+
+    return input() if _input else text
+
+
+def dialogue(talker_name: str, text: str, delay: float = 0.02, _input: bool = False) -> str:
+    text = colored(Fore.YELLOW, talker_name) + ": " + text
+    return printing(text, delay, _input)
+
+
+# Отпечатывает вариант ошибки (всё красным текстом)
+# Дёргает состояние "исключения" чтобы отпечатать проблему.
+def error(text, e: Exception):
+    print(colored(Fore.RED, text, ": ", str(e)))

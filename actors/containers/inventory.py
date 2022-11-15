@@ -1,3 +1,4 @@
+from items.item import EquipSlot, Item
 from utils.text import *
 
 # Максимальное кол-во мест в инвентаре
@@ -7,13 +8,15 @@ MAX_SPACE = 20
 class Inventory:
     space: int = 0  # текущая забитость инвентаря
     items: list = [None] * MAX_SPACE  # предметы в инвентаре
-    right_hand = None  # экипировано в правую руку
-    left_hand = None  # экипировано в левую руку
-    helmet = None  # экипированный шлем
-    body = None  # экипированное тело
-    gaiters = None  # экипированные штаны
-    gloves = None  # экипированные перчатки
-    boots = None  # экипированные ботинки
+    equipment: dict = {
+        EquipSlot.RightHand: None,
+        EquipSlot.LeftHand: None,
+        EquipSlot.Helmet: None,
+        EquipSlot.Body: None,
+        EquipSlot.Gaiters: None,
+        EquipSlot.Boots: None,
+        EquipSlot.Gloves: None
+    }
 
     def get_item_by_name(self, name):
         for item in self.items:
@@ -70,3 +73,9 @@ class Inventory:
 
     def show(self):
         print([x for x in self.items])
+
+    def get_equipped(self, slot: EquipSlot) -> Item:
+        return self.equipment[slot]
+
+    def set_equipment(self, item: Item):
+        self.equipment[item.slot] = item
